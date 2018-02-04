@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+<body>
+<nav>
+    <a href="./">All Blogs</a>
+    <a href="./blog?allByUser=1">My Blogs</a>
+    <a href="./newpost">Add New Blog Post</a>
+    <a href ="./login">Login</a>
+    <a href="./logout">Logout</a>
+</nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

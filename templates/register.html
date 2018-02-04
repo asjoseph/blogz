@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<body style= "background-color: #97f5b2">
+<h1 style = "color: #6107b6; font-family: script">Sign Up Below!!!</h1>
+
+<form action="/register"  method = "post">
+
+    <input id = "Username" input type = "text" name = "Username" placeholder = "Username" value= "" required>
+    <br>
+    <input id = "p1" input type = "Password" name = "Password" pattern="^\S{3,21}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have b/w 3-20 characters, no spaces' : ''); if(this.checkValidity()) form.p2.pattern = this.value;" placeholder = "Password" required>
+    <br>
+    <input id = "p2" input type = "Password" name = "Verify Password" pattern="^\S{3,21}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" placeholder = "Verify Password" required>
+    <br>
+    <input type = "text" name= "Email" pattern= "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder = "Email" value= '' required>
+    <br>
+    <input type = "submit"  name= "Submit Query" value = "Submit Query">
+
+</form>
+</body>
+{% endblock %}
